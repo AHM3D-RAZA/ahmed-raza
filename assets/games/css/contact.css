@@ -1,0 +1,14 @@
+/* section 6: contact */
+.contact{min-height:600px;background:var(--soot);color:var(--cream)}
+.perch{position:absolute;z-index:3;transition:left .7s cubic-bezier(.2,.8,.2,1),top .7s cubic-bezier(.2,.8,.2,1)}
+.perch svg{display:block;width:90px;height:64px}
+.perch .wing{animation:none}
+.links-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:84px}
+.link{display:block;border:2px solid var(--cream);border-radius:6px;padding:22px 20px;text-decoration:none;color:var(--cream)}
+.link .mono{font-size:11px;letter-spacing:1px}
+.link b{display:block;margin-top:6px;font-size:21px;overflow-wrap:anywhere}
+.link:hover,.link:focus{background:var(--sun);color:var(--soot);border-color:var(--sun)}
+.foot{margin-top:40px;font-size:14px;letter-spacing:0}.foot a{color:var(--sun)}
+.night,.night-wins{position:absolute;left:0;right:0;bottom:0;height:90px;clip-path:polygon(0 50%,8% 50%,8% 20%,16% 20%,16% 60%,26% 60%,26% 10%,35% 10%,35% 45%,46% 45%,46% 25%,55% 25%,55% 55%,66% 55%,66% 5%,75% 5%,75% 40%,86% 40%,86% 22%,100% 22%,100% 100%,0 100%)}
+.night{background:#1d1517}
+.night-wins{background:radial-gradient(circle,var(--win) 2px,transparent 2.6px) 0 0/30px 22px;animation:glow 5s steps(1) infinite}

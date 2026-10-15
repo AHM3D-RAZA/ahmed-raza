@@ -1,0 +1,12 @@
+/* section 6: contact */
+.big{font-size:clamp(48px,6vw,72px);letter-spacing:-2.5px;margin-top:12px}
+.avail{display:flex;align-items:center;gap:10px;margin-top:16px;color:#c9c6bd;letter-spacing:0;font-size:13px}
+.live{width:9px;height:9px;border-radius:50%;background:var(--led);animation:ping 1.8s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(123,191,154,.6)}100%{box-shadow:0 0 0 10px rgba(123,191,154,0)}}
+.copy{display:block;margin-top:30px;cursor:pointer;border:0;border-radius:8px;background:var(--sun);color:var(--ink);padding:20px 28px;font-size:clamp(18px,2.2vw,26px);font-weight:800;letter-spacing:-.5px;transition:transform .15s}
+.copy.done{transform:scale(.97)}
+.hint{margin-top:10px;letter-spacing:0}.hint a{color:var(--sun)}
+.contact-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:38px}
+.contact-links .card b{display:block;margin-top:6px;font-size:20px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:40px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:0}
+.foot a{color:var(--sun)}

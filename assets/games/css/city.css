@@ -1,0 +1,32 @@
+/* section 4: pigeon city. The .world is twice the screen wide and slides left forever. */
+.city{min-height:760px;background:var(--sun)}
+.controls{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-top:20px;font:500 13px 'JetBrains Mono',monospace}
+.score{background:var(--soot);color:var(--sun);border-radius:4px;padding:11px 16px}
+.btn.sm{font-size:13px;padding:9px 16px}
+.aside{position:absolute;right:clamp(20px,5.6vw,72px);top:64px;width:min(330px,40%);transform:rotate(-2deg)}
+.aside .mono{font-size:11px;letter-spacing:1px;margin-bottom:6px}
+.aside .hand{font-size:27px;line-height:1.15}
+.flyer{position:absolute;z-index:60;left:230px;top:380px;pointer-events:none;transition:top .6s cubic-bezier(.2,.8,.2,1)}
+.flyer svg{display:block;width:120px;height:86px}
+.world{position:absolute;left:0;bottom:0;width:2560px;height:420px;animation:scroll 34s linear infinite}
+@keyframes scroll{to{transform:translateX(-1280px)}}
+.towers{position:absolute;left:0;bottom:90px;width:2560px;display:flex;align-items:flex-end}
+.tower{flex:1;border-right:4px solid var(--sun);transition:height .6s cubic-bezier(.3,1.5,.5,1)}
+.street{position:absolute;left:0;bottom:0;width:2560px;height:90px;box-sizing:border-box;background:#4a3a3f;border-top:6px solid var(--brick)}
+.lane{position:absolute;left:0;bottom:3px;width:2560px;height:4px;background:repeating-linear-gradient(90deg,#8f7a7f 0 40px,transparent 40px 80px)}
+.folk{position:absolute;width:44px;height:84px;background:none;border:0;padding:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;cursor:default}
+.folk.near:not(.hit){cursor:pointer}
+.folk .tag{height:16px;font:500 12px 'JetBrains Mono',monospace}
+.folk.near:not(.hit) .tag::before{content:'\25BC'}
+.folk.hit .tag::before{content:'+1'}
+.folk svg{display:block;overflow:visible;transform-origin:50% 100%;transition:transform .2s}
+.folk.hit svg{transform:rotate(-9deg)}
+.splat{opacity:0}.folk.hit .splat{opacity:1}
+.l1{transform-origin:11px 40px;animation:walk .6s ease-in-out infinite alternate}
+.l2{transform-origin:19px 40px;animation:walk .6s ease-in-out infinite alternate-reverse}
+@keyframes walk{from{transform:rotate(-16deg)}to{transform:rotate(16deg)}}
+.sling{position:absolute;z-index:40;bottom:46px;width:26px;height:48px}
+.sling i{display:block;width:14px;height:14px;margin-left:3px;border-radius:50%;background:#f0c9a0;border:2px solid var(--soot)}
+.sling b{display:block;width:22px;height:30px;background:var(--signal);border:2px solid var(--soot);border-radius:6px}
+.peb{position:absolute;left:12px;top:0;width:9px;height:9px;border-radius:50%;background:var(--soot);animation:peb 2.6s ease-out infinite}
+@keyframes peb{0%{transform:translate(0,0);opacity:1}70%{transform:translate(36px,-250px);opacity:1}100%{transform:translate(44px,-290px);opacity:0}}

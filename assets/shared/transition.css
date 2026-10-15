@@ -1,0 +1,22 @@
+/* Page transition between the two worlds: the pigeon flies across and pulls the other world in behind it.
+   The other world is loaded in a hidden iframe (see transition.js), slides in from the left, then the real page opens. */
+.sw-stage{position:fixed;inset:0;z-index:99999;overflow:hidden;pointer-events:none}
+.sw-stage.go{pointer-events:auto}
+.sw-pull{position:absolute;top:0;left:0;width:100vw;height:100%;transform:translateX(calc(-100vw - 220px));transition:transform .9s cubic-bezier(.65,0,.35,1)}
+.sw-stage.go .sw-pull{transform:translateX(0)}
+.sw-frame{position:absolute;inset:0;width:100%;height:100%;border:0;box-shadow:14px 0 40px rgba(0,0,0,.35)}
+/* the pigeon and its rope sit just past the page's right edge */
+.sw-lead{position:absolute;top:0;bottom:0;left:100%;width:220px}
+.sw-rope{position:absolute;left:0;top:calc(50% + 16px);width:84px;height:2px;background:#f2efe6;box-shadow:0 1px 3px rgba(0,0,0,.4)}
+.sw-bird{position:absolute;left:80px;top:calc(50% - 50px);width:140px;height:100px}
+.sw-bird svg{display:block}
+.sw-stage.go .sw-bird svg{animation:swBob .3s ease-in-out infinite alternate}
+.sw-bird .wing{transform-origin:70px 62px}
+.sw-stage.go .sw-bird .wing{animation:swFlap .14s ease-in-out infinite alternate}
+@keyframes swBob{to{transform:translateY(-6px)}}
+@keyframes swFlap{to{transform:rotate(-40deg)}}
+/* the page you leave is nudged along, so the whole screen feels pulled */
+html.sw-moving{overflow:hidden}
+html.sw-moving body{transform:translateX(12vw);transition:transform .9s cubic-bezier(.65,0,.35,1)}
+/* the page you arrive on was already seen in the iframe, so skip its intro animations */
+html.sw-arrived .r{animation:none}

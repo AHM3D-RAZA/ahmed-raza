@@ -1,0 +1,29 @@
+:root{--ink:#14171a;--surface:#1b1f23;--line:#2a2f34;--line2:#3a4046;--text:#f2efe6;--muted:#9aa0a6;--sun:#ffd98a;--led:#7bbf9a;--red:#e5483a}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;color:var(--text);background:radial-gradient(rgba(242,239,230,.08) 1px,transparent 1.5px) 0 0/28px 28px,var(--ink)}
+section{padding:56px clamp(20px,5.6vw,72px)}
+button{font-family:inherit;color:inherit}
+a{color:inherit;text-decoration:none}a:hover{color:var(--sun)}
+h1,h2,h3,h4{margin:0;font-weight:800}
+h2{font-size:clamp(38px,4.5vw,56px);line-height:1;letter-spacing:-2px}
+.mono{font:500 12px 'JetBrains Mono',monospace;letter-spacing:1px;margin:0}
+.dim{color:var(--muted)}.sun{color:var(--sun)}
+.btn{display:inline-block;font:500 14px 'JetBrains Mono',monospace;padding:14px 22px;border-radius:4px;border:1px solid var(--text);background:none;cursor:pointer}
+.btn.gold{background:var(--sun);border-color:var(--sun);color:var(--ink)}.btn.gold:hover{color:var(--ink)}
+.btn.sm{font-size:12px;padding:10px 14px;border-color:var(--sun);color:var(--sun)}
+.pill{cursor:pointer;border-radius:999px;padding:8px 14px;font:500 12px 'JetBrains Mono',monospace;border:1px solid var(--line2);background:transparent}
+.pill[aria-pressed=true]{background:var(--sun);border-color:var(--sun);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line2);border-radius:999px;padding:5px 11px;font:500 12px 'JetBrains Mono',monospace}
+/* shared animations */
+@keyframes rise{from{opacity:0;transform:translateY(16px)}}
+@keyframes dash{to{stroke-dashoffset:-20}}
+@keyframes float{50%{transform:translateY(-4px)}}
+@keyframes bob{50%{transform:translateY(-2px)}}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}}
+.r{animation:rise .6s cubic-bezier(.2,.8,.2,1) both}
+.bob{animation:bob 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* smooth scrolling for the nav and anchor links */
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}

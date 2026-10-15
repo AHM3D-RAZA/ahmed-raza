@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ahmed Raza | Game Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Caveat:wght@600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/games/css/base.css">
+<link rel="stylesheet" href="../assets/games/css/hero.css">
+<link rel="stylesheet" href="../assets/games/css/room.css">
+<link rel="stylesheet" href="../assets/games/css/shelf.css">
+<link rel="stylesheet" href="../assets/games/css/city.css">
+<link rel="stylesheet" href="../assets/games/css/about.css">
+<link rel="stylesheet" href="../assets/games/css/contact.css"><link rel="stylesheet" href="../assets/shared/transition.css"><script src="../assets/shared/transition.js"></script></head><body>
+
+<section id="hero" class="hero">
+  <div class="sun"></div>
+  <div class="layer far" data-depth="0.02"></div><div class="layer mid" data-depth="0.04"></div>
+  <div class="layer near" data-depth="0.07"></div><div class="layer wins" data-depth="0.07"></div>
+  <nav class="nav"><b class="logo">ahmed raza</b>
+    <div class="links mono"><a href="#room">Games</a><a href="#shelf">Playables</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    <div class="switch mono"><span>Games</span><a href="../" data-switch>Software</a></div></nav>
+  <div class="copy"><p class="mono" id="role"></p><h1 id="tagline"></h1>
+    <div class="ctas"><a class="btn dark" href="#shelf">Play something</a><a class="btn line" href="#room">Turn the torch on</a></div></div>
+  <p class="hand note" id="hint">click the pigeon. go on.</p>
+  <div class="bubble mono" id="bubble" hidden></div>
+  <button class="pigeon" id="pigeon" aria-label="Pigeon. Click it."></button>
+</section>
+
+<section id="room" class="room">
+  <p class="mono gold">02 / THE ROOM</p><h2>Torch on. Look around.</h2>
+  <p class="hand orange">move your mouse. it's dark in here.</p>
+  <div class="cards" id="room-cards"></div>
+  <div class="row"><p class="hand orange">next stop: the arcade shelf, where you can play things.</p>
+    <button class="btn line light" id="lights">Switch the lights on</button></div>
+  <div class="torch-mask"></div>
+</section>
+
+<section id="shelf" class="shelf">
+  <p class="mono gold">03 / ARCADE SHELF</p><h2>Pick one up. Play it here.</h2>
+  <p class="hand orange">small, rough, and mine. no sign-up.</p>
+  <div class="carts" id="carts"></div><div class="plank"></div>
+  <div class="console">
+    <div class="screen"><div class="scan"></div><div id="screen-in"></div></div>
+    <div class="info"><p id="s-blurb"></p><p class="mono gold" id="s-meta"></p><div id="s-actions" class="actions"></div></div>
+  </div>
+</section>
+
+<section id="city" class="city">
+  <p class="mono">04 / PIGEON HAVOC</p><h2>Tiny pigeon. Big city.</h2>
+  <p class="hand">move your mouse to fly. click the people below.</p>
+  <div class="controls"><span class="score" id="score"></span><button class="btn line sm" id="shuffle">Shuffle the street</button><span id="city-msg"></span></div>
+  <div class="aside"><p class="mono" id="city-note-label"></p><p class="hand" id="city-note"></p></div>
+  <div class="flyer" id="flyer" aria-hidden="true"></div>
+  <div class="world" id="world"></div>
+</section>
+
+<section id="about" class="about">
+  <p class="mono">05 / ABOUT</p><h2>Player one.</h2>
+  <div class="about-grid">
+    <div><p class="intro" id="about-intro"></p><div class="quests" id="quests"><p class="mono">QUEST LOG</p></div></div>
+    <div class="inventory"><p class="mono">INVENTORY</p><div class="slots" id="slots"></div><div class="dialog mono" id="item-desc"></div></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <p class="mono gold">06 / CONTACT</p><h2>Land here.</h2>
+  <p class="hand orange">got a job, a game jam, or a pigeon problem? say hi.</p>
+  <div class="perch" id="perch" aria-hidden="true"></div>
+  <div class="links-grid" id="contact-links"></div>
+  <p class="mono gold foot">Looking for the engineer instead? <a href="../" data-switch>Switch to the software world</a></p>
+  <div class="night"></div><div class="night-wins"></div>
+</section>
+<script src="../assets/games/js/content.js"></script>
+<script src="../assets/games/js/shared.js"></script>
+<script src="../assets/games/js/hero.js"></script>
+<script src="../assets/games/js/room.js"></script>
+<script src="../assets/games/js/shelf.js"></script>
+<script src="../assets/games/js/city.js"></script>
+<script src="../assets/games/js/about.js"></script>
+<script src="../assets/games/js/contact.js"></script>
+<script src="../assets/games/js/main.js"></script>
+</body></html>

@@ -1,0 +1,15 @@
+/* section 5: about */
+.about-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:64px;margin-top:12px;align-items:start}
+.about h2{font-size:clamp(36px,4.4vw,56px);line-height:1.02}
+#about-text p{margin:24px 0 0;font-size:20px;line-height:1.55;color:#c9c6bd}
+.about-side{display:flex;flex-direction:column;gap:16px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.card{display:block;border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:18px;transition:border-color .2s,transform .2s cubic-bezier(.3,1.6,.5,1)}
+.card:hover{border-color:var(--sun);transform:translateY(-3px)}
+.stats b{display:block;font-size:40px;color:var(--sun)}.stats span{display:block;margin-top:2px;font-size:11px}
+.sw{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px}
+.sw b{display:block;font-size:24px;margin:6px 0}.sw .mono{display:block}
+.sw svg{width:76px;height:54px;flex:none}
+.sw:hover svg{animation:hop .7s ease-out}
+@keyframes hop{30%{transform:translateY(-12px) rotate(-6deg)}60%{transform:translateY(0)}80%{transform:translateY(-5px)}}
+@media (max-width:900px){.about-grid{grid-template-columns:minmax(0,1fr)}}

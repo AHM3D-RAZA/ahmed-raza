@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+Two worlds, one site.
 
-First, run the development server:
+- `/`        software world (the default, link this one for software jobs)
+- `/games`   game world (link this one for game dev jobs)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Locally, open `index.html` or `games/index.html` in a browser. Deploy the whole folder as a static site (Vercel, Netlify, GitHub Pages).
+
+## Layout
 ```
+index.html                software world page
+games/index.html          game world page
+assets/software/          css/, js/, media/ for the software world
+assets/games/             css/, js/, media/ for the game world
+assets/shared/            transition.css + transition.js (the pigeon transition)
+```
+Each world has its own `README`-style layout: `js/content.js` holds the content, one css and one js file per section, `js/main.js` starts them. The two worlds share no code, so changing one cannot break the other.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## The pigeon transition
+Any link with the `data-switch` attribute plays it: the other world is loaded in a hidden iframe (it starts loading when you hover the link), then the pigeon flies across the screen pulling that page in from the left, over the page you are leaving (which is nudged along). When it lands, the real page opens, so the address bar and the back button work normally. It is skipped for people who prefer reduced motion, and if the other page is slow to load it just opens.
+To add another switch link, copy an existing one: `<a href="games/" data-switch>...</a>`.
+The speed (0.9s) and the distance the old page moves (12vw) are in `assets/shared/transition.css`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Content paths
+- Software: `assets/software/media/...` (the resume PDF is there; replace it with the same file name).
+- Games: media paths in `assets/games/js/content.js` start with `../assets/games/media/`.
