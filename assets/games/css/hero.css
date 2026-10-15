@@ -1,0 +1,24 @@
+/* hero */
+.hero{min-height:760px;background:var(--dusk)}
+.sun{position:absolute;right:13%;top:110px;width:210px;height:210px;border-radius:50%;background:var(--sun)}
+.layer{position:absolute;left:-60px;right:-60px;bottom:0}
+.far{height:430px;background:var(--brick);clip-path:polygon(0 60%,6% 60%,6% 40%,13% 40%,13% 55%,20% 55%,20% 30%,27% 30%,27% 50%,36% 50%,36% 38%,44% 38%,44% 58%,52% 58%,52% 25%,60% 25%,60% 48%,69% 48%,69% 35%,77% 35%,77% 56%,85% 56%,85% 42%,93% 42%,93% 52%,100% 52%,100% 100%,0 100%)}
+.mid{height:330px;background:#8f4b3e;clip-path:polygon(0 50%,8% 50%,8% 28%,15% 28%,15% 46%,24% 46%,24% 20%,31% 20%,31% 44%,40% 44%,40% 30%,49% 30%,49% 52%,58% 52%,58% 24%,66% 24%,66% 42%,75% 42%,75% 18%,83% 18%,83% 48%,92% 48%,92% 34%,100% 34%,100% 100%,0 100%)}
+.near,.wins{height:230px;clip-path:polygon(0 30%,10% 30%,10% 8%,19% 8%,19% 36%,28% 36%,28% 14%,38% 14%,38% 40%,47% 40%,47% 6%,57% 6%,57% 32%,67% 32%,67% 12%,77% 12%,77% 38%,88% 38%,88% 16%,100% 16%,100% 100%,0 100%)}
+.near{background:var(--soot)}
+.wins{background:radial-gradient(circle,var(--win) 2px,transparent 2.6px) 0 0/30px 38px;animation:glow 5s steps(1) infinite}
+.nav{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin:-28px 0 0}
+.logo{font-size:26px;letter-spacing:-1px}
+.links{display:flex;gap:30px;font-size:14px;letter-spacing:0}
+.switch{display:flex;background:var(--soot);border-radius:30px;padding:4px;font-size:13px;letter-spacing:0}
+.switch span{background:var(--sun);color:var(--soot);border-radius:26px;padding:8px 16px}
+.switch a{color:var(--cream);padding:8px 16px;text-decoration:none}
+.copy{position:relative;z-index:2;max-width:660px;padding-top:64px}
+.copy .mono{margin-bottom:18px}
+h1{font-size:clamp(42px,6vw,78px);line-height:.96;letter-spacing:-2.5px}
+.ctas{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px}
+.note{position:absolute;z-index:3;left:60%;top:250px;transform:rotate(-6deg)}
+.bubble{position:absolute;z-index:4;background:#fff4de;border:2px solid var(--soot);border-radius:18px 18px 18px 3px;padding:10px 16px;white-space:nowrap;letter-spacing:0;font-size:14px}
+.pigeon{position:absolute;z-index:3;background:none;border:0;padding:0;cursor:pointer;transition:left .9s cubic-bezier(.2,.8,.2,1),top .9s cubic-bezier(.2,.8,.2,1)}
+.pigeon svg{display:block}
+.bob{animation:bob 2.4s ease-in-out infinite}.wing{transform-origin:70px 62px;animation:flap .5s ease-in-out infinite}

@@ -1,0 +1,27 @@
+/* section 1: hero */
+.hero{min-height:780px;padding-top:28px;padding-bottom:64px}
+.nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-size:20px;letter-spacing:-.5px}
+.links{display:flex;gap:30px;letter-spacing:0;font-size:13px}
+.switch-wrap{position:relative}
+.pigeon-mini{position:absolute;right:20px;top:-22px}
+.switch{display:flex;background:var(--line);border-radius:30px;padding:4px;letter-spacing:0}
+.switch a{padding:8px 16px}.switch span{background:var(--sun);color:var(--ink);border-radius:26px;padding:8px 16px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;margin-top:80px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line2);border-radius:999px;padding:8px 14px;letter-spacing:0}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--led)}
+h1{margin-top:24px;font-size:clamp(44px,5.8vw,74px);line-height:1;letter-spacing:-2.5px}
+h1 span{display:block}h1 em{font-style:normal;color:var(--sun)}
+.intro{margin:24px 0 0;max-width:540px;font-size:19px;line-height:1.5;color:var(--muted)}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:34px;letter-spacing:0;font-size:14px}
+.label{margin-bottom:10px}
+.map{position:relative;aspect-ratio:560/430;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.flow{vector-effect:non-scaling-stroke;stroke-width:1px;stroke:var(--line2);stroke-dasharray:3 7;animation:dash 1.4s linear infinite}
+.flow.lit{stroke-width:2px;stroke:var(--sun)}
+.node-pos{position:absolute;transform:translate(-50%,-50%)}
+.node{cursor:pointer;border-radius:999px;padding:9px 14px;font:500 12px 'JetBrains Mono',monospace;border:1px solid var(--line2);background:var(--ink);animation:float 4s ease-in-out infinite;transition:background .15s,border-color .15s}
+.node.near{border-color:var(--sun)}.node.on{background:var(--sun);color:var(--ink)}
+.map-card{margin-top:14px;border:1px solid var(--line);border-radius:10px;padding:14px 18px;background:var(--surface);min-height:92px}
+.map-card p:last-child{margin:6px 0 0;font-size:17px;line-height:1.45}
+@media (max-width:900px){.hero-grid{grid-template-columns:minmax(0,1fr);margin-top:48px}}

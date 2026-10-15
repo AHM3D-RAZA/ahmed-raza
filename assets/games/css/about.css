@@ -1,0 +1,17 @@
+/* section 5: about */
+.about{min-height:760px;background:var(--dusk)}
+.about-grid{display:flex;flex-wrap:wrap;gap:64px;margin-top:34px;align-items:flex-start}
+.about-grid>div:first-child{flex:1 1 360px;display:flex;flex-direction:column;gap:26px}
+.intro{margin:0;font-size:21px;line-height:1.45}
+.quests{display:flex;flex-direction:column;gap:12px;border-left:3px solid var(--soot);padding-left:22px;font-size:18px}
+.quests .mono{font-size:11px;letter-spacing:1px}
+.quest{display:flex;gap:16px}.quest .mono{width:110px;flex:none;font-size:14px;letter-spacing:0}
+.inventory{flex:0 1 470px}
+.inventory>.mono{font-size:11px;letter-spacing:1px;margin-bottom:12px}
+.slots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.slot{aspect-ratio:1;cursor:pointer;border-radius:8px;border:3px solid var(--soot);color:var(--soot);font:800 24px 'Bricolage Grotesque',sans-serif;box-shadow:0 3px 0 var(--soot);transition:transform .2s cubic-bezier(.3,1.6,.5,1),box-shadow .2s}
+.slot[aria-pressed=true]{transform:translateY(-7px);box-shadow:0 7px 0 var(--soot)}
+.dialog{margin-top:20px;background:var(--soot);color:var(--sun);border-radius:6px;padding:18px 20px;min-height:84px;font-size:15px;line-height:1.6;letter-spacing:0}
+.dialog .name{color:var(--cream)}
+.cursor{animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}

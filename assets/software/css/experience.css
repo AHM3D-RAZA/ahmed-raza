@@ -1,0 +1,23 @@
+/* sections 3 and 4: experience and certifications */
+.roles{margin-top:34px;max-width:860px}
+.role{display:grid;grid-template-columns:28px 1fr;gap:18px}
+.rail{display:flex;flex-direction:column;align-items:center}
+.dot-r{width:12px;height:12px;margin-top:9px;border-radius:50%;border:2px solid var(--sun);transition:background .2s}
+.role.open .dot-r{background:var(--sun)}
+.rail-line{flex:1;width:2px;background:var(--line)}
+.role-body{padding-bottom:22px}
+.role-head{width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;text-align:left;cursor:pointer;border:0;background:transparent;padding:0}
+.role-head b{display:block;font-size:24px;letter-spacing:-.5px}
+.org{display:block;margin-top:4px;font-size:16px;color:var(--muted)}
+.when{white-space:nowrap;padding-top:8px;letter-spacing:0}
+.role-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.role.open .role-more{grid-template-rows:1fr}
+.role-more>div{overflow:hidden}
+.role-more ul{margin:12px 0 0;padding-left:20px;font-size:16px;line-height:1.6;color:#c9c6bd}
+.edu{align-items:start}.edu .rail{justify-content:center}.edu p{margin:0;font-size:16px}
+.sq{width:12px;height:12px;border-radius:3px;background:var(--led)}
+.cert-head{margin-top:64px}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:20px}
+.cert{display:block;border:1px solid var(--line);border-radius:12px;padding:22px;background:var(--surface);transition:transform .2s cubic-bezier(.3,1.6,.5,1),border-color .2s}
+.cert:hover,.cert:focus{transform:translateY(-5px);border-color:var(--sun)}
+.cert b{display:block;font-size:22px;letter-spacing:-.5px;margin:10px 0 12px;min-height:56px}

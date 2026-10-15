@@ -1,0 +1,25 @@
+/* section 2: selected work (list, preview window, details) and the previews */
+.work-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;margin-top:12px}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.work-grid{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:40px;margin-top:34px;align-items:start}
+.rows{border-top:1px solid var(--line)}
+.row{width:100%;display:grid;grid-template-columns:30px 1fr 24px;gap:10px;align-items:center;text-align:left;cursor:pointer;border:0;border-bottom:1px solid var(--line);padding:16px 12px;background:transparent;transition:background .15s}
+.row[aria-pressed=true]{background:var(--surface)}
+.row b{display:block;font-size:21px;letter-spacing:-.5px}.row small{display:block;margin-top:3px;font-size:11px;letter-spacing:0}
+.arrow{font-size:20px;color:var(--sun);opacity:.35;transition:transform .2s}
+.row[aria-pressed=true] .arrow{opacity:1;transform:translateX(4px)}
+.frame{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.bar{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--line)}
+.bar i{width:10px;height:10px;border-radius:50%;background:var(--line2)}
+.bar span{margin-left:10px;overflow-wrap:anywhere}.bar em{margin-left:auto;font-style:normal;color:var(--led);font-size:11px}
+.screen{min-height:360px}
+.ph{min-height:360px;display:flex;align-items:center;justify-content:center;text-align:center;font:500 12px 'JetBrains Mono',monospace;color:var(--muted);background:repeating-linear-gradient(135deg,var(--surface) 0 12px,#20252a 12px 24px)}
+.info{padding:22px 4px 0;animation:pop .35s cubic-bezier(.2,.8,.2,1) both}
+.info h3{font-size:30px;letter-spacing:-1px;margin-top:6px}
+.lead{margin:8px 0 0;font-size:17px;line-height:1.5;color:#c9c6bd}
+.info ul{margin:12px 0 0;padding-left:20px;font-size:16px;line-height:1.55}
+.info .chips{margin-top:14px}
+.links{display:flex;flex-wrap:wrap;gap:22px;margin-top:16px;letter-spacing:0;font-size:13px}
+.links a{color:var(--sun)}
+.note{margin-top:12px;letter-spacing:0}
+@media (max-width:900px){.work-grid{grid-template-columns:minmax(0,1fr)}}
